@@ -1,33 +1,32 @@
-import { Library, FlaskConical, Trees, Globe2, Dumbbell, Bus, ShieldCheck, Sparkles } from 'lucide-react';
+import { Library, FlaskConical, Dumbbell, Music, Trees, Shirt, BusFront, Wifi } from 'lucide-react';
 
 const facilities = [
-  { icon: Library, title: 'Knowledge Centre', desc: 'Digitized library with multilingual archives, VR study pods, and AI research assistants.' },
-  { icon: FlaskConical, title: 'Innovation Labs', desc: 'Robotics, biotech, and clean-energy labs with project-based learning.' },
-  { icon: Trees, title: 'Green Campus', desc: 'Eco-parks, organic gardens, and rainwater harvesting, aligned with ancient sustainability practices.' },
-  { icon: Globe2, title: 'Global Exchange', desc: 'International partnerships, Model UN, and cultural immersion programs.' },
-  { icon: Dumbbell, title: 'Sports & Wellness', desc: 'Olympic-size facilities, yoga shalas, meditation domes, and performance coaching.' },
-  { icon: Bus, title: 'Smart Transport', desc: 'GPS-enabled fleet, EV charging, and safe-guard routing with parent app.' },
-  { icon: ShieldCheck, title: 'Safety First', desc: '24/7 security, health centre, and emergency readiness with smart monitoring.' },
-  { icon: Sparkles, title: 'Arts & Culture', desc: 'Classical dance, music, and theatre fused with digital storytelling labs.' },
+  { icon: Library, title: 'Digital Library', desc: 'Extensive resources and e-journals with quiet pods.' },
+  { icon: FlaskConical, title: 'Innovation Labs', desc: 'AI, robotics, and design thinking studios.' },
+  { icon: Dumbbell, title: 'Sports Complex', desc: 'Indoor arena, track, swimming, and yoga pavilion.' },
+  { icon: Music, title: 'Performing Arts', desc: 'Music, dance, theater with professional guidance.' },
+  { icon: Trees, title: 'Green Campus', desc: 'Organic gardens and sustainability projects.' },
+  { icon: Shirt, title: 'House System', desc: 'Leadership through four vibrant houses.' },
+  { icon: BusFront, title: 'Transport', desc: 'Safe GPS-enabled buses across the city.' },
+  { icon: Wifi, title: 'Smart Classrooms', desc: 'Interactive boards and high-speed Wi‑Fi.' },
 ];
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="bg-white py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-10 flex flex-col items-start gap-2">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Facilities</h2>
-          <p className="max-w-2xl text-gray-600">A world-class ecosystem designed to nurture curiosity, character, and global citizenship.</p>
+    <section id="facilities" className="py-20 bg-gradient-to-b from-white to-slate-50">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">World-class Facilities</h2>
+          <p className="mt-2 text-slate-600">Designed for curiosity, wellbeing, and future-ready skills.</p>
         </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {facilities.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group rounded-2xl border border-gray-100 bg-gradient-to-br from-white to-gray-50 p-6 shadow-sm transition hover:shadow-md">
-              <div className="mb-4 inline-flex rounded-xl bg-blue-600/10 p-3 text-blue-700 ring-1 ring-blue-200">
-                <Icon className="h-6 w-6" />
+            <div key={title} className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-10 w-10 rounded-lg bg-slate-900 text-white grid place-items-center">
+                <Icon className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{desc}</p>
+              <h3 className="mt-4 font-medium text-slate-900">{title}</h3>
+              <p className="mt-1 text-sm text-slate-600">{desc}</p>
             </div>
           ))}
         </div>
